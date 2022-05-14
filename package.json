@@ -5,6 +5,13 @@
   "author": "TakuKobayashi",
   "license": "MIT",
   "repository": "https://github.com/TakuKobayashi/jest-in-case",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "format": "prettier --config .prettierrc --write \"src/**/*.{ts,js}\"",
+    "docs": "typedoc --out docs/ && touch docs/.nojekyll",
+    "jest": "jest -c jest.config.js",
+    "ts-node": "ts-node"
+  },
   "dependencies": {
     "commander": "^9.2.0"
   },
