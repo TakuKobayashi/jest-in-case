@@ -1,4 +1,7 @@
 import { program, Command } from 'commander';
+import { templateExport } from './commands/template/export';
+import { templateImport } from './commands/template/import';
+import { spreadsheetExport } from './commands/spreadsheet/export';
 
 /**
  * Set global CLI configurations
@@ -17,6 +20,7 @@ templateCommand
   .command('export <template-file>')
   .description('export test template to jest file from test case file [yml]')
   .action(async (templateFilePath): Promise<void> => {
+    templateExport(templateFilePath);
     console.log(templateFilePath);
   });
 templateCommand
